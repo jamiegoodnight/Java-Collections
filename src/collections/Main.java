@@ -59,6 +59,30 @@ public class Main {
             }
         }
 
+        if (dogsArrayList.get(2).getBreed().equals("Turtle"))
+        {
+            System.out.println("Equals");
+        }
+        else 
+        {
+            System.out.println("Not a turt");
+        }
+
+        System.out.println("*** / ***");
+
+        // adding elements
+        // 2 represents dogsArrayList[2]
+        dogsArrayList.add(2, new Dogs("Labrador", 75, false));
+        dogsArrayList.forEach(d -> System.out.println(d));
+        System.out.println("*** / ***");
+        dogsArrayList.set(2, new Dogs("Poodle", 50, false));
+        dogsArrayList.forEach(d -> System.out.println(d));
+        System.out.println("*** / ***");
+        System.out.println("Size" + " " + dogsArrayList.size());
+        dogsArrayList.remove(3);
+        System.out.println(dogsArrayList.get(3));
+
+
         // Choice in index
         // fixed ele type
         // Dynamic length
