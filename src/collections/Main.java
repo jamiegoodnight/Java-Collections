@@ -34,6 +34,30 @@ public class Main {
         // Fixed index
         // Dynamic length
         System.out.println("*** ArrayList ***");
+        // Object -> Collection -> List -> ArrayList
+        ArrayList<Dogs> dogsArrayList = new ArrayList<Dogs>();
+        dogsArrayList.addAll(Arrays.asList(dogArr));
+
+        dogsArrayList.add(new Dogs("Mutt", 15, true));
+
+        for (Dogs d : dogsArrayList)
+        {
+            System.out.println(d);
+        }
+        
+        System.out.println("*** / ***");
+
+        for (Dogs d : dogsArrayList)
+        {
+            if (d.getAvgWeight() >= 50)
+            {
+                System.out.println(d.getBreed() + "are large");
+            }
+            else 
+            {
+                System.out.println(d.getBreed() + "are small");
+            }
+        }
 
         // Choice in index
         // fixed ele type
