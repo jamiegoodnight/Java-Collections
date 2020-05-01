@@ -1,5 +1,9 @@
 package collections;
 
+import java.util.*;
+
+// ^ All of the different utilities for Java. We want to use Arrays.
+
 public class Main {
 
     public static void main(String[] args)
@@ -14,14 +18,16 @@ public class Main {
         // dogArr = new Dogs[5]; // 0 - 4
         Dogs[] dogArr = new Dogs[5];
         dogArr[0] = new Dogs("Springer", 50, false);
-        dogArr[1] = new Dogs("Springer", 50, false);
-        dogArr[2] = new Dogs("Springer", 50, false);
-        dogArr[3] = new Dogs("Chihuahua", 25, true);
+        dogArr[1] = new Dogs("Bulldog", 40, true);
+        dogArr[2] = new Dogs("Collie", 50, false);
+        dogArr[3] = new Dogs("Chihuahua", 15, true);
         dogArr[4] = new Dogs("Corgi", 35, true);
         for (int i = 0; i < dogArr.length; i++)
         {
             System.out.println(dogArr[i]);
         }
+
+        System.out.println(Arrays.toString(dogArr));
         
 
         // Fixed ele type
