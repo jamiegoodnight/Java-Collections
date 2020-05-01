@@ -45,4 +45,14 @@ public class Dogs
         this.apartment=apartment;
     }
 
+    public String toString()
+    {
+        String rtnStr = "Dogs{" + 
+                        "breed:" + breed + "\n" +
+                        "avgWeight: " + avgWeight + "\n" +
+                        "apartment:" + apartment + 
+                        "}" + "\n";
+        return rtnStr;
+    }
+
 }
