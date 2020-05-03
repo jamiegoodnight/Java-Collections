@@ -86,7 +86,33 @@ public class Main {
         // Choice in index
         // fixed ele type
         // Dynamic length
+
+        // Keys are unique references to elements in hashmap
+        // Values are what we find by using the key
         System.out.println("*** HashMaps ***");
+        // Every base data type has an associated class
+        HashMap<Integer, Dogs> dogsHashMap = new HashMap<Integer, Dogs>();
+
+        int hashcount = 0;
+        for (Dogs d : dogsArrayList)
+        {   
+            // put = if the key doesn't exist, add it to hashmap
+            // if key does exist, it replaces it instead
+            dogsHashMap.put(hashcount, d);
+            hashcount++;
+        }
+        // How to clear ArrayList and free memory
+        dogsArrayList.clear();
+        // Get the dog with the key of 3—we don't know which dog
+        System.out.println(dogsHashMap.get(3));
+        System.out.print(dogsHashMap.size());
+        dogsHashMap.remove(3);
+        System.out.println(dogsHashMap.get(3));
+
+        for (Integer i : )
+        {
+
+        }
 
     }
 }
