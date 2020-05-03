@@ -109,10 +109,29 @@ public class Main {
         dogsHashMap.remove(3);
         System.out.println(dogsHashMap.get(3));
 
-        for (Integer i : )
+        for (Integer i : dogsHashMap.keySet())
         {
-
+            System.out.println("key: " + i + " value: " + dogsHashMap.get(i));
         }
+        System.out.println("*** / ***");
 
+        // Sorted HashMap
+        ArrayList<HashMap.Entry<Integer, Dogs>> sortedMap = new ArrayList<HashMap.Entry<Integer, Dogs>>();
+        sortedMap.addAll(dogsHashMap.entrySet());
+        
+        Collections.sort(sortedMap, new Comparator<HashMap.Entry<Integer, Dogs>>()
+            {
+                public int compare(HashMap.Entry<Integer, Dogs> o1, HashMap.Entry<Integer, Dogs> o2)
+                {
+                    return o1.getValue().getBreed().compareToIgnoreCase(o2.getValue().getBreed());
+                    //return o2.getValue().getAvgWeight() - o1.getValue().getAvgWeight();
+                }
+            });
+
+            for (HashMap.Entry<Integer, Dogs> d : sortedMap)
+            {
+                System.out.println("key: " + d.getKey() + " value: " + d.getValue());
+            }
+            System.out.print("*** / ***");
     }
 }
